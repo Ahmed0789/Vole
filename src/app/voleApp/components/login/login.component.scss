@@ -1,0 +1,29 @@
+mat-dialog-content {
+  background-color: #205158;
+  mat-card-title{
+    color: white;
+  }
+  mat-divider{
+    background-color: white;
+  }
+  .content{
+    margin-top: 10px;
+    form{
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      mat-form-field{
+        margin-top: 10px;
+      }
+      .button{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        button{
+          margin: 10px;
+        }
+      }
+    }
+  }
+}

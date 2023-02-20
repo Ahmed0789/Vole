@@ -1,0 +1,24 @@
+<mat-dialog-content>
+  <mat-card-title>Login</mat-card-title>
+  <mat-divider></mat-divider>
+  <div class="content">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+       <mat-form-field appearance="fill">
+         <input type="text" matInput placeholder="Email" formControlName="username">
+       </mat-form-field>
+
+       <mat-form-field appearance="fill">
+         <input type="password" matInput placeholder="Password" formControlName="password">
+       </mat-form-field>
+
+     <p *ngIf="error" class="error">
+       {{ error }}
+     </p>
+     <div class="button">
+       <button type="submit" mat-raised-button>Sign In</button>
+       <button (click)="loginWithGoogle()" mat-raised-button class="google-login-btn">with Google</button>
+       <button mat-raised-button (click)="forgottenPassword()">need help?</button>
+     </div>
+    </form>
+  </div>
+</mat-dialog-content>

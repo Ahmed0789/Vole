@@ -1,0 +1,7 @@
+<div>
+  HELLO FRIENDS AHMED HERE
+  <div class="card-container">
+    <div><button class="card card-small" (click)="captureImage()"><span>capture image</span></button></div>
+  </div>
+  <img [src]="image" alt="camera-image" *ngIf="image" [style.width]="'300px'">
+</div>
