@@ -1,5 +1,3 @@
-import { FacebookLoginProvider, GoogleLoginProvider } from '@abacritt/angularx-social-login';
-import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -17,7 +15,7 @@ export class LoginComponent {
 
   @Output() submitEM = new EventEmitter();
 
-  constructor( private fB : FormBuilder, private router: Router, private socialAuthService: SocialAuthService ){}
+  constructor( private fB : FormBuilder, private router: Router ){}
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -27,16 +25,6 @@ export class LoginComponent {
       password: new FormControl('', Validators.required)
     });
 
-  }
-
-  loginWithGoogle(): void {
-    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID)
-      .then(() => this.router.navigate(['dashboard']));
-  }
-
-  loginWithFB(): void {
-    this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID)
-    .then(() => this.router.navigate(['dashboard']));
   }
 
   submit() {

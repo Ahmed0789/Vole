@@ -1,7 +1,7 @@
 <mat-dialog-content>
-  <mat-card-title>Login</mat-card-title>
-  <mat-divider></mat-divider>
   <div class="content">
+    <mat-card class="mat-elevation-z8">
+      <mat-card-title>Login</mat-card-title>
     <form [formGroup]="form" (ngSubmit)="submit()">
        <mat-form-field appearance="fill">
          <input type="text" matInput placeholder="Email" formControlName="username">
@@ -16,9 +16,9 @@
      </p>
      <div class="button">
        <button type="submit" mat-raised-button>Sign In</button>
-       <button (click)="loginWithGoogle()" mat-raised-button class="google-login-btn">with Google</button>
        <button mat-raised-button (click)="forgottenPassword()">need help?</button>
      </div>
     </form>
+  </mat-card>
   </div>
 </mat-dialog-content>

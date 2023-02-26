@@ -2,20 +2,21 @@
   <div class="top">
       <mat-icon [inline]='true'>notifications_none</mat-icon>
   </div>
-  <div class="user">
+  <div class="user" *ngIf="!loggedIn">
     <button class="name" mat-button (click)="login()">Login / Register</button>
   </div>
-  <div class="user" >
-      <img [src]="'../../../../assets/images/images.png'" alt="">
+  <div class="user" *ngIf="loggedIn">
+      <img src="'../../../../assets/images/vole-high-resolution-color-logo.png'" alt="logo">
       <h4 class="name">admin</h4>
       <p class="mail">admin@gmail.com</p>
   </div>
   <div class="menu" >
       <div class="menu-head">
-          <span>dashboard</span>
+          <span>Vole Chauffeurs</span>
       </div>
+      <mat-divider></mat-divider>
       <div class="menu-item">
-          <button mat-button class="menu-button" [routerLink]="['/dashboard']">
+          <button mat-button class="menu-button" (click)="goto('dash')">
               <mat-icon>dashboard</mat-icon>
               <span>Home</span>
           </button>

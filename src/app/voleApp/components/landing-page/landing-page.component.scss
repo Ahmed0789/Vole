@@ -1,0 +1,72 @@
+@media (min-width: 508px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    justify-content: center;
+    padding: 10px;
+    .desktop-view-content {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+      button {
+        width: 200px;
+        margin: 10px;
+        background-color: black;
+        color: white;
+      }
+    }
+
+
+  }
+  .explore-btn {
+    background-color: black;
+    color: white;
+    width: 100px;
+    margin: 10px;
+    padding:4px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 644px;
+  justify-content:space-evenly;
+  padding: 10px;
+  .content {
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      border-radius: 4px;
+      mat-icon {
+        color: gray;
+      }
+      mat-chip {
+        border-radius: 8px;
+      }
+    }
+  }
+
+  mat-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: x-small;
+  }
+  // mat-card {
+  //   margin: 4%;
+  //   mat-card-header {
+
+  //   }
+  // }
+  // mat-card-content{
+  //   form {
+  //     mat-form-field {
+
+  //     }
+  //   }
+  // }
+}

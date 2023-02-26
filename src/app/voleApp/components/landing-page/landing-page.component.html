@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="desktop-view-content">
+    <img src="../../../../assets/images/vole-high-resolution-logo-black-on-white-background.png" alt="logo" width="100%" height="auto">
+    <div class="btn">
+      <button mat-raised-button routerLink="/dash" *ngIf="!mobileMode">Explore <mat-icon>explore</mat-icon></button>
+    <button mat-raised-button (click)="openloginForm()" *ngIf="!mobileMode">Sign up or Login <mat-icon>account_circle</mat-icon></button>
+    </div>
+  </div>
+      <div class="content" *ngIf="mobileMode">
+        <ng-container>
+          <form [formGroup]="numberForm" (ngSubmit)="submitMobileNumber()">
+            <mat-form-field appearance="outline">
+             <mat-label>Register or Login</mat-label>
+              <input type="text" matInput placeholder="mobile number" formControlName="number">
+              <mat-icon matSuffix (click)="submitMobileNumber()">keyboard_tab</mat-icon>
+              <mat-error>Please enter a valid UK mobile number</mat-error>
+            </mat-form-field>
+          <!-- <div class="button">
+            <button type="submit" mat-raised-button>Sign In</button>
+            <asl-google-signin-button class="google-login-btn"></asl-google-signin-button>
+            <button mat-raised-button (click)="forgottenPassword()">need help?</button>
+          </div> -->
+         </form>
+        </ng-container>
+
+      <ng-container *ngIf="!password">
+        <form [formGroup]="otpForm" *ngIf="otp" (ngSubmit)="submitOtp()">
+          <mat-form-field *ngIf="otp == true">
+            <mat-label>OTP code</mat-label>
+            <input type="password" matInput placeholder="Please enter the code we sent" formControlName="otp">
+            <mat-icon matSuffix (click)="submitOtp()">keyboard_tab</mat-icon>
+            <mat-chip>resend</mat-chip>
+            <mat-error>OTP code should be 6 digits</mat-error>
+          </mat-form-field>
+
+        </form>
+      </ng-container>
+
+
+        <form [formGroup]="passwordForm" *ngIf="password" (ngSubmit)="submitPassword()">
+        <mat-form-field *ngIf="password == true">
+          <input type="password" matInput placeholder="password" formControlName="password">
+          <mat-error>Password length should be minimum 10 characters</mat-error>
+        </mat-form-field>
+      </form>
+
+          <mat-toolbar>
+              <span>&#174; Vole Chauffeurs LTD.</span>
+              <span routerLink="/dash/help">Help</span>
+        </mat-toolbar>
+        </div>
+</div>

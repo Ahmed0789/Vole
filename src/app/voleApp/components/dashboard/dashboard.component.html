@@ -1,7 +1,38 @@
-<div>
+<!-- <div class="dashboard">
   HELLO FRIENDS AHMED HERE
   <div class="card-container">
     <div><button class="card card-small" (click)="captureImage()"><span>capture image</span></button></div>
   </div>
   <img [src]="image" alt="camera-image" *ngIf="image" [style.width]="'300px'">
-</div>
+  <div>
+    <div>
+      <mat-card>
+          <mat-card-header>
+              <mat-card-title>Title</mat-card-title>
+              <mat-card-subtitle>Subtitle</mat-card-subtitle>
+          </mat-card-header>
+          <img matCardImage alt="" src="../../../../assets/images/images.png">
+          <mat-card-content>
+              Text content
+          </mat-card-content>
+          <mat-card-actions align="start">
+              <button mat-button>Action1</button>
+
+          </mat-card-actions>
+          <mat-card-footer>
+              Footer
+          </mat-card-footer>
+      </mat-card>
+      <mat-divider></mat-divider>
+      <mat-expansion-panel [hideToggle]="false">
+          <mat-expansion-panel-header>
+              <mat-panel-title></mat-panel-title>
+              <mat-panel-description></mat-panel-description>
+          </mat-expansion-panel-header>
+          Content that gets shown when expanded
+      </mat-expansion-panel>
+    </div>
+  </div>
+</div> -->
+<google-map [center]="center"
+            [zoom]="zoom"></google-map>

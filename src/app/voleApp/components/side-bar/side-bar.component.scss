@@ -18,10 +18,16 @@ mat-icon{ color: #8997ac; font-family: 'Material Icons'; vertical-align: middle 
     color: #466be0;
     text-transform: uppercase;
     font-weight: 900;
-    margin-left: 40px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    text-align: center;
 }
 
+mat-divider{
+  border: 2px solid darkcyan;
+  justify-self: center;
+  width:80%;
+  margin: 0px 20px 10px;
+}
 .menu-item{ margin: 0 10px 0 10px;
     .menu-button{
       display: flex;
